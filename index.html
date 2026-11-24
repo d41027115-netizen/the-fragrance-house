@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Fragrance House | A Scent That Stays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">THE FRAGRANCE HOUSE</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#shop">Shop</a>
+           <a href="#collections">Collections</a>
+           <a href="#faq">FAQ</a>
+<a href="#about">Our Story</a>
+<a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart" onclick="openCart()">Bag (0)</button>
+    </header>
+    <section class="how-to-order">
+    <p class="eyebrow">SIMPLE & SEAMLESS</p>
+
+    <h2>How to order.</h2>
+
+    <p class="order-intro">
+        Your next favourite fragrance is just a few steps away.
+    </p>
+
+    <div class="order-steps">
+
+        <div class="order-step">
+            <span>01</span>
+            <h3>Explore</h3>
+            <p>
+                Browse our collection and discover fragrances
+                that suit your style.
+            </p>
+        </div>
+
+        <div class="order-step">
+            <span>02</span>
+            <h3>Place your order</h3>
+            <p>
+                Add your favourites to your bag and submit
+                your order directly through WhatsApp.
+            </p>
+        </div>
+
+        <div class="order-step">
+            <span>03</span>
+            <h3>Confirm & pay</h3>
+            <p>
+                We'll confirm your order and provide our
+                EFT payment details.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about" class="about-section">
+    <p class="eyebrow">OUR STORY</p>
+
+    <h2>Luxury in every drop.<br>Value in every bottle.</h2>
+
+    <p class="about-description">
+        We believe that enjoying beautiful fragrances shouldn't
+        come with an extravagant price tag.
+
+        Our collection of carefully selected inspired fragrances
+        brings you captivating scents, lasting impressions and
+        exceptional value, without stretching your budget.
+
+        From everyday favourites to special occasions, discover
+        fragrances that let you smell wonderful and spend wisely.
+    </p>
+
+    <p class="about-highlight">
+        Beautiful scents. Lasting impressions. Affordable luxury.
+    </p>
+</section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">THE ART OF FRAGRANCE</p>
+                <h1>A scent<br>that stays.</h1>
+                <p class="hero-description">
+                    Discover fragrances that leave a lasting impression.
+                    Everyday luxury, made accessible.
+                </p>
+                <a href="#shop" class="shop-button">EXPLORE COLLECTION</a>
+            </div>
+        </section>
+
+        <section id="shop" class="shop-section">
+    <p class="eyebrow">OUR COLLECTION</p>
+    <h2>Discover your signature.</h2>
+    <p>Find a fragrance that feels like you.</p>
+
+    <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Men">Men</button>
+        <button class="filter" data-category="Women">Women</button>
+        <button class="filter" data-category="Unisex">Unisex</button>
+    </div>
+
+    <div class="product-grid" id="product-grid"></div>
+</section>
+
+        <section id="collections" class="collections">
+            <h2>Fragrance for every occasion.</h2>
+        </section>
+        <section id="faq" class="faq-section"></section>
+    <p class="eyebrow">NEED TO KNOW</p>
+    <h2>Frequently asked questions.</h2>
+    <p class="faq-intro">A few things you might like to know.</p>
+
+    <div class="faq-container">
+
+        <details class="faq-item">
+            <summary>Are these original designer fragrances?</summary>
+            <p>No. Our collection consists of inspired fragrances, offering scents reminiscent of popular fragrance styles at affordable prices.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>How much does each fragrance cost?</summary>
+            <p>Every fragrance is priced at R100 per bottle.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Are your fragrances long-lasting?</summary>
+            <p>Our collection features long-lasting fragrances designed to leave a memorable impression.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I place an order?</summary>
+            <p>Simply browse our collection, add your favourites to your bag and submit your order through WhatsApp.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>How can I pay?</summary>
+            <p>We accept EFT payments. Payment details will be provided once your order has been confirmed.</p>
+        </details>
+
+    </div>
+</section>
+
+    </main>
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <button class="close-cart" onclick="closeCart()">×</button>
+
+        <h2>Your Shopping Bag</h2>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            Total: R<span id="cart-total">0</span>
+        </div>
+
+       <div class="customer-details">
+
+    <div class="checkout-heading">
+        <span>THE FRAGRANCE HOUSE</span>
+        <h3>Complete Your Order</h3>
+        <p>Please provide your details below.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="customer-name">Full Name</label>
+        <input type="text" id="customer-name"
+            placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+        <label for="customer-phone">Phone Number</label>
+        <input type="tel" id="customer-phone"
+            placeholder="e.g. 082 123 4567">
+    </div>
+
+    <div class="form-group">
+        <label for="order-notes">Order Notes <span>(Optional)</span></label>
+        <textarea id="order-notes"
+            placeholder="Any special requests?"></textarea>
+    </div>
+
+</div>
+
+<button class="checkout-button" onclick="checkout()">
+    ORDER VIA WHATSAPP
+</button>
+    </div>
+</div>
+   <footer id="contact">
+    <p class="eyebrow">GET IN TOUCH</p>
+
+    <h2>We'd love to hear from you.</h2>
+
+    <p>
+        Have a question about our fragrances or want to
+        place an order? We're just a message away.
+    </p>
+
+    <a href="https://wa.me/27823197873"
+       target="_blank"
+       class="contact-button">
+        CHAT WITH US ON WHATSAPP
+    </a>
+
+    <div class="footer-bottom">
+        <h3>THE FRAGRANCE HOUSE</h3>
+        <p>A scent that stays.</p>
+        <p>© 2026 THE FRAGRANCE HOUSE. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <button class="floating-cart" onclick="openCart()">
+    🛒
+    <span id="floating-cart-count">0</span>
+</button>
+</body>
+</html>
